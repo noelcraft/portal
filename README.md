@@ -1,10 +1,7 @@
-# OUTDATED
-This README.md will be updated soon.
+# Announcement
 
-~ 01/08/2020
+The development for the Gdeft/portal mod is discontinued for version 5.0 in return of continuing the development for version 6.0. 
 
 ## Credits
 
-[**@sk7725**](https://github.com/sk7725) for ~~most~~ some of the codes, check the mod [here](https://github.com/sk7725/Commandblocks).
-
-[**@Sonnicon**](https://github.com/Sonnicon) for the hard light bridge shader ~~that I stole from.~~
+[**@sk7725**](https://github.com/sk7725), [**@Sonnicon**](https://github.com/Sonnicon)
