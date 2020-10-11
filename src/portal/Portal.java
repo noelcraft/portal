@@ -9,6 +9,7 @@ import mindustry.gen.*;
 import mindustry.graphics.Pal;
 import mindustry.mod.*;
 import mindustry.ui.dialogs.*;
+import portal.content.*;
 
 public class Portal extends Mod{
 	public final String githubURL = "https://github.com/Gdeft/portal";
@@ -28,7 +29,7 @@ public class Portal extends Mod{
 					p.button("@dialog.startup.github", Icon.github, () -> {
 						Core.app.openURI(githubURL);
 					}).growX().pad(16f).size(210f, 64f).center();
-				}).growY().width(540).center().row();
+				}).growY().width(540f).center().row();
 				
 				dialog.cont.button("@ok", dialog::hide).size(105f, 55f).center();
 				dialog.show();
@@ -39,6 +40,7 @@ public class Portal extends Mod{
 	@Override
 	public void loadContent(){
 		Log.info("Loading Portal contents..");
+		new PortalBlocks().load();
 	}
 
 }
