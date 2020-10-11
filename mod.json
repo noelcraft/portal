@@ -2,6 +2,8 @@
   "name": "portal",
   "displayName": "Portal",
   "author": "Gdeft",
-  "description": "Simulates the world of Aperture Science Enrichment Center in Mindustry, still in development.\n\n• https://github.com/gdeft/portal/tree/6.0\n• https://discord.gg/RCCVQFW",
-  "version": "0.1.0"
+  "main": "portal.Portal",
+  "description": "Simulates the world of Aperture Science Enrichment Center in Mindustry.",
+  "version": "0.1.0",
+  "minGameVersion": "105"
 }
