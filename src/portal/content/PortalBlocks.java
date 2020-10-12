@@ -38,7 +38,7 @@ public class PortalBlocks implements ContentList{
 	public static Block
 	
 	//environment
-	conductorWall, conductorWallLarge, isolatorWall, isolatorWallLarge,
+	conductorWall, conductorWallLarge, goo, isolatorWall, isolatorWallLarge,
 	
 	//power
 	powerTransferer, powerTransfererHollow, powerTransfererClear;
@@ -51,24 +51,39 @@ public class PortalBlocks implements ContentList{
 			requirements(Category.defense, with(Items.lead, 5, Items.silicon, 2));
 			isConductor = true;
 			size = 1;
+			buildVisibility = BuildVisibility.sandboxOnly;
 		}};
 		
 		conductorWallLarge = new WallPanel("conductor-wall-large"){{
 			requirements(Category.defense, mult(conductorWall.requirements, 4));
 			isConductor = true;
 			size = 2;
+			buildVisibility = BuildVisibility.sandboxOnly;
+		}};
+		
+		goo = new Floor("goo"){{
+			speedMultiplier = 0.001f;
+			variants = 0;
+			isLiquid = true;
+			status = StatusEffects.wet;
+			statusDuration = 120f;
+			drownTime = 60f;
+			cacheLayer = CacheLayer.water;
+			albedo = 0.7f;
 		}};
 		
 		isolatorWall = new WallPanel("isolator-wall"){{
 			requirements(Category.defense, with(Items.lead, 5, Items.metaglass, 2));
 			isConductor = false;
 			size = 1;
+			buildVisibility = BuildVisibility.sandboxOnly;
 		}};
 		
 		isolatorWallLarge = new WallPanel("isolator-wall-large"){{
 			requirements(Category.defense, mult(isolatorWall.requirements, 4));
 			isConductor = false;
 			size = 2;
+			buildVisibility = BuildVisibility.sandboxOnly;
 		}};
 		
 		//endregion
