@@ -23,7 +23,7 @@ public class Portal extends Mod{
 				
 				dialog.cont.pane(p -> {
 					p.add("Portal").center().color(Pal.accent).row();
-					p.image().pad(4f).height(6f).fillX().color(Pal.accent).row();
+					p.image().pad(4f).height(4f).fillX().color(Pal.accent).row();
 					p.labelWrap("@dialog.startup.info").pad(4f).growX().row();
 					
 					p.button("@dialog.startup.github", Icon.github, () -> {

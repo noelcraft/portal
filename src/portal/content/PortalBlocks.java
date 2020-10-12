@@ -29,19 +29,51 @@ import mindustry.world.blocks.units.*;
 import mindustry.world.consumers.*;
 import mindustry.world.draw.*;
 import mindustry.world.meta.*;
-import portal.world.blocks.*;
+import portal.world.blocks.environment.*;
+import portal.world.blocks.power.*;
 
 import static mindustry.type.ItemStack.*;
 
 public class PortalBlocks implements ContentList{
 	public static Block
 	
+	//environment
+	conductorWall, conductorWallLarge, isolatorWall, isolatorWallLarge,
+	
 	//power
 	powerTransferer, powerTransfererHollow, powerTransfererClear;
 	
 	@Override
 	public void load(){
+		//region environment
+		
+		conductorWall = new WallPanel("conductor-wall"){{
+			requirements(Category.defense, with(Items.lead, 5, Items.silicon, 2));
+			isConductor = true;
+			size = 1;
+		}};
+		
+		conductorWallLarge = new WallPanel("conductor-wall-large"){{
+			requirements(Category.defense, mult(conductorWall.requirements, 4));
+			isConductor = true;
+			size = 2;
+		}};
+		
+		isolatorWall = new WallPanel("isolator-wall"){{
+			requirements(Category.defense, with(Items.lead, 5, Items.metaglass, 2));
+			isConductor = false;
+			size = 1;
+		}};
+		
+		isolatorWallLarge = new WallPanel("isolator-wall-large"){{
+			requirements(Category.defense, mult(isolatorWall.requirements, 4));
+			isConductor = false;
+			size = 2;
+		}};
+		
+		//endregion
 		//region power
+		
 		powerTransferer = new PowerTransferer("power-transferer"){{
 			requirements(Category.power, with(Items.copper, 1, Items.lead, 3, Items.silicon, 5));
 			health = 10;
@@ -57,5 +89,7 @@ public class PortalBlocks implements ContentList{
 			health = 10;
 			isClear = true;
 		}};
+		
+		//endregion
 	}
 }

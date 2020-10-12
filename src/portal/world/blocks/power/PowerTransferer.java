@@ -1,4 +1,4 @@
-package portal.world.blocks;
+package portal.world.blocks.power;
 
 import arc.*;
 import arc.func.*;
@@ -50,6 +50,11 @@ public class PowerTransferer extends PowerNode{
 		stats.remove(BlockStat.powerConnections);
 	}
 	
+	@Override
+	public void drawPlace(int x, int y, int rotation, boolean valid){
+		
+	}
+	
 	public class PowerTransfererBuild extends PowerNodeBuild{
 		@Override
 		public void draw(){
@@ -61,6 +66,11 @@ public class PowerTransferer extends PowerNode{
 					Draw.rect(topRegion, x, y);
 				}
 			}
+		}
+		
+		@Override
+		public void drawSelect(){
+			
 		}
 	}
 }
