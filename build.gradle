@@ -12,7 +12,7 @@ repositories{
 }
 
 ext{
-    mindustryVersion = 'v106'
+    mindustryVersion = 'v107'
     sdkVersion = '30'
     sdkRoot = System.getenv("ANDROID_HOME")
 
