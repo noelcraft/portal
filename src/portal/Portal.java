@@ -40,7 +40,7 @@ public class Portal extends Mod{
 	@Override
 	public void loadContent(){
 		new PortalBlocks().load();
-		Log.info("Loaded Portal content.");
+		new PortalUnitTypes().load();
 	}
 
 }

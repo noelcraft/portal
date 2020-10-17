@@ -48,6 +48,7 @@ public class PortalBlocks implements ContentList{
 		//region environment
 		
 		conductorFloor = new FloorPanel("conductor-floor"){{
+			isConductor = true;
 			size = 1;
 			buildVisibility = BuildVisibility.hidden;
 		}};
@@ -78,6 +79,7 @@ public class PortalBlocks implements ContentList{
 		}};
 		
 		isolatorFloor = new FloorPanel("isolator-floor"){{
+			isConductor = false;
 			size = 1;
 			buildVisibility = BuildVisibility.hidden;
 		}};
